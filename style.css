@@ -1,0 +1,47 @@
+*{
+    background-color: beige;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    background-color: cadetblue;
+    margin: auto;
+    margin-top: 75px;
+    border-radius: 30px;
+}
+
+.screen {
+    width: 350px;
+    height:100px ;
+    margin-top: 20px;
+    background-color: rgb(224, 207, 207);
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.buttonset1, .buttonset2, .buttonset3, .buttonset4 {
+    display:flex;
+    background-color: cadetblue;;
+    
+}
+
+.button {
+    width:60px;
+    height: 40px;
+    background-color: rgb(180, 239, 246);
+    margin: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
