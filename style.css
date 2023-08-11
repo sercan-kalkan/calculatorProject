@@ -20,6 +20,16 @@
     height:100px ;
     margin-top: 20px;
     background-color: rgb(224, 207, 207);
+    text-align: right;
+}
+
+input {
+   
+    height:50px ;
+    background-color: rgb(224, 207, 207);
+    border: 0;
+    text-align: right;
+    font-size: 30px;
 }
 
 
@@ -30,6 +40,14 @@
     align-items: center;
 
 }
+
+.operator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .buttonset1, .buttonset2, .buttonset3, .buttonset4 {
     display:flex;
     background-color: cadetblue;
@@ -39,7 +57,7 @@
     
 }
 
-.button {
+.button, .operate {
     width:70px;
     height: 40px;
     background-color: rgb(180, 239, 246);

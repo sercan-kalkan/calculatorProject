@@ -1,34 +1,69 @@
-let firstNumber;
-let secondNumber;
-let operator;
-
-
-function add(a,b) {
-    return a+b;
+function add(num1,num2) {
+    return num1+num2;
 }
 
-function substract (a,b) {
-    return a-b;
+function subtract (num1,num2) {
+    return num1-num2;
 }
 
-function  multiply (a,b) {
-    return a*b;
+function multiply (num1,num2) {
+    return num1*num2;
 }
 
-function divide (a,b) {
-    return a/b;
+function dividquwre (num1,num2) {
+    return num1 / num2;
 }
 
-function operate (operator, firstNumber, secondNumber) {
+let firstNumber="";
+let secondNumber="";
+let operator ="";
+let display="";
 
-}
+
+const input = document.querySelector('input');
+const btns = document.querySelectorAll('.button');
+let num1= document.createElement('p');
+const monitor= [];
 
 
-let btns = document.querySelectorAll('button');
-let input = document.querySelector('input');
+let calculate;
 btns.forEach(function (i) {
-  i.addEventListener('click', function(e) {
-    input.placeholder += i.value;
-});
-});
+    i.addEventListener('click',function(e){
+        if(typeof i.value  ==='number' && operator===null ) {
+            firstNumber += i.value;
+            input.value = firstNumber;
+        }
+        else if(i.value=="+" ||i.value=="-" || i.value=="*" || i.value=="/")
+            {
+            input.value="";
+            operator+= i.value;
+            }
+        else {
+            secondNumber += i.value;
+            input.value = secondNumber;
+        }
+     })
+     return{firstNumber, secondNumber,operator}
+})
+
+
+
+
+
+function operate (firstNumber,secondNumber,operator) {
+    switch (operator) {
+        case "+":
+            add(firstNumber,secondNumber);
+            break
+        case "-":
+            subtract(firstNumber,secondNumber);
+            break
+        case "*":
+            multiply(firstNumber,secondNumber);
+            break
+        case "/":
+            divide(firstNumber,secondNumber);
+    }
+}
+
 
