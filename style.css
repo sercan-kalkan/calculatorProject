@@ -57,7 +57,7 @@ input {
     
 }
 
-.button, .operate {
+.button, .operator {
     width:70px;
     height: 40px;
     background-color: rgb(180, 239, 246);

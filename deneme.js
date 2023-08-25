@@ -123,28 +123,3 @@ btns.forEach(function (i) {
 });
 
 
-function getNumbers (operator) {
-    if(operator==""){
-        btns.forEach(function (i) {
-            i.addEventListener('click',function(e){
-                firstNumber += i.value;
-                input.value = firstNumber;
-            })
-        })
-    }
-    else if(operator!==""){
-        input.value="";
-        btns.forEach(function (i) {
-            i.addEventListener('click',function(e){
-                secondNumber += i.value;
-                input.value = secondNumber;
-            })
-        })
-    }
-return {firstNumber,secondNumber};
-}
-
-
-getNumbers(operator);
-
-*/
