@@ -1,27 +1,30 @@
 function add(num1,num2) {
-    return num1+num2;
+    result = num1+num2;
+    return result;
 }
 
 function subtract (num1,num2) {
-    return num1-num2;
+    result= num1-num2;
+    return result;
 }
 
 function multiply (num1,num2) {
-    return num1*num2;
+    result = num1*num2;
+    return result;
 }
 
 function dividquwre (num1,num2) {
-    return num1 / num2;
+    result= num1 / num2;
+    return result;
 }
 
 let firstNumber;
 let secondNumber;
 let operator ="";
 let display="";
-let display2 ="";
-const displayArray =[];
-let calculate="";
 let input = document.querySelector('input');
+let result;
+
 
 
 
@@ -29,7 +32,6 @@ const screen = document.querySelector('.screen');
 const btns = document.querySelectorAll('.button');
 const operators = document.querySelectorAll('.operator');
 const equal = document.querySelector('#equal');
-//const input = document.querySelector('input');
 
 
 operators.forEach(function (op) {
@@ -50,7 +52,8 @@ btns.forEach(function (btn) {
 
 //en son bir flag oluşturup ekrandaki değeri silip ikinciyi almayı deneycektik
 
-equal.addEventListener('click', function() {
+equal.addEventListener('click', function(e) {
+    input.placeholder="";
     operate(firstNumber, operator, secondNumber); // operate fonksiyonunu çağırarak işlemi yap
     input.placeholder = result; // Sonucu ekrana yansıt
 });
