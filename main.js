@@ -32,6 +32,7 @@ const screen = document.querySelector('.screen');
 const btns = document.querySelectorAll('.button');
 const operators = document.querySelectorAll('.operator');
 const equal = document.querySelector('#equal');
+const clear = document.querySelector('.clear');
 
 
 operators.forEach(function (op) {
@@ -50,14 +51,20 @@ btns.forEach(function (btn) {
     })
 })
 
-//en son bir flag oluşturup ekrandaki değeri silip ikinciyi almayı deneycektik
 
 equal.addEventListener('click', function(e) {
     input.placeholder="";
-    operate(firstNumber, operator, secondNumber); // operate fonksiyonunu çağırarak işlemi yap
-    input.placeholder = result; // Sonucu ekrana yansıt
+    operate(firstNumber, operator, secondNumber); 
+    input.placeholder = result; 
 });
 
+clear.addEventListener('click', function (e) {
+    input.placeholder="0";
+    firstNumber="";
+    secondNumber="";
+    operator ="";
+    display="";
+})
 
 function operate (firstNumber,operator,secondNumber) {
     switch (operator) {
