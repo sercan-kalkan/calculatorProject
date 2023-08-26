@@ -29,9 +29,7 @@ let display="";
 let input = document.querySelector('input');
 let result;
 
-
-
-
+//Entering DOM elements   b 
 const screen = document.querySelector('.screen');
 const btns = document.querySelectorAll('.button');
 const operators = document.querySelectorAll('.operator');
@@ -44,6 +42,9 @@ operators.forEach(function (op) {
         operator = op.innerText;
         firstNumber = parseFloat(display);
         display=""
+        if (result!==undefined){
+            firstNumber = result;
+        }
     })
 })
 
@@ -55,21 +56,24 @@ btns.forEach(function (btn) {
     })
 })
 
-
+//clicking equal calls operate function
 equal.addEventListener('click', function(e) {
     input.placeholder="";
     operate(firstNumber, operator, secondNumber); 
     input.placeholder = result; 
 });
 
+//clear button clears everything
 clear.addEventListener('click', function (e) {
     input.placeholder="0";
     firstNumber="";
     secondNumber="";
     operator ="";
     display="";
+    result =undefined;
 })
 
+//function for operate numbers
 function operate (firstNumber,operator,secondNumber) {
     switch (operator) {
         case "+":

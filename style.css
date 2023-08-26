@@ -1,5 +1,6 @@
 *{
-    background-color: beige;
+    background-color: #f2f2f2;
+    
 }
 
 .flex-container {
@@ -9,7 +10,8 @@
     align-items: center;
     width: 400px;
     height: 500px;
-    background-color: cadetblue;
+    background-color:#12202e; 
+    ;
     margin: auto;
     margin-top: 75px;
     border-radius: 30px;
@@ -19,17 +21,26 @@
     width: 350px;
     height:100px ;
     margin-top: 20px;
-    background-color: rgb(224, 207, 207);
+    background-color: rgba(125,140, 115);
     text-align: right;
 }
 
 input {
    
-    height:50px ;
-    background-color: rgb(224, 207, 207);
+    height:75px ;
+    background-color: rgb(125,140, 115);
     border: 0;
     text-align: right;
     font-size: 30px;
+    color: black;
+
+}
+
+::placeholder {
+    color: black;
+    font-size: 50px;
+    font-family: 'Calculator', sans-serif;
+                                                
 }
 
 
@@ -50,7 +61,7 @@ input {
 
 .buttonset1, .buttonset2, .buttonset3, .buttonset4 {
     display:flex;
-    background-color: cadetblue;
+    background-color: #12202e;
     width: 400px;
     height: 70px;
     justify-content: center;
@@ -59,10 +70,20 @@ input {
 
 .button, .operator {
     width:70px;
-    height: 40px;
-    background-color: rgb(180, 239, 246);
+    height: 50px;
+    background-color: #535962;
     margin: 10px;
     text-align: center;
     padding: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+.operator {
+    background-color: orangered;
+}
+
+#equal {
+    background-color: rgb(47, 174, 132);
 }
 
