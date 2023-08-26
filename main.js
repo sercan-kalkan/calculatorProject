@@ -1,3 +1,4 @@
+//functions for operations
 function add(num1,num2) {
     result = num1+num2;
     return result;
@@ -21,7 +22,7 @@ function divide (num1,num2) {
     }
     return result;
 }
-
+//defining variables
 let firstNumber;
 let secondNumber;
 let operator ="";
@@ -29,14 +30,14 @@ let display="";
 let input = document.querySelector('input');
 let result;
 
-//Entering DOM elements   b 
+//Selecting DOM Elements for manupulation 
 const screen = document.querySelector('.screen');
 const btns = document.querySelectorAll('.button');
 const operators = document.querySelectorAll('.operator');
 const equal = document.querySelector('#equal');
 const clear = document.querySelector('.clear');
 
-
+//clicking to operators
 operators.forEach(function (op) {
     op.addEventListener('click', function(e){
         operator = op.innerText;
@@ -47,7 +48,7 @@ operators.forEach(function (op) {
         }
     })
 })
-
+//clicking buttons
 btns.forEach(function (btn) {
     btn.addEventListener('click', function(e){  
         display += btn.innerText;
@@ -60,7 +61,7 @@ btns.forEach(function (btn) {
 equal.addEventListener('click', function(e) {
     input.placeholder="";
     operate(firstNumber, operator, secondNumber); 
-    input.placeholder = result; 
+        input.placeholder = result;   
 });
 
 //clear button clears everything
