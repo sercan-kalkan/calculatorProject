@@ -13,8 +13,12 @@ function multiply (num1,num2) {
     return result;
 }
 
-function dividquwre (num1,num2) {
-    result= num1 / num2;
+function divide (num1,num2) {
+    if (secondNumber==0) {
+        result ="you made a mistake"
+    }else {
+        result= num1 / num2;
+    }
     return result;
 }
 
